@@ -91,6 +91,7 @@ const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
 */
 
+/*
 // coding chanllenge 1
 const weightMark = 78;
 const heightMark = 1.69;
@@ -111,4 +112,81 @@ const markHigherBMI2 = bmiMark2 > bmiJohn2;
 
 console.log(bmiMark, bmiJohn, markHigherBMI);
 console.log(bmiMark2, bmiJohn2, markHigherBMI2);
+*/
+/*
+// Strings ard Template Literals
+const firstName = 'Jonas';
+const job = 'teacher';
+const birthYear = 1991;
+const year = 2037;
+const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job + '!';
+console.log(jonas);
 
+
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+console.log(jonasNew);
+console.log(`Just a regular string...`);
+
+// traditional
+console.log('line1 \n\
+line2\n\
+line3');
+
+// with template strings
+console.log(`line1
+line2
+line3`);
+*/
+/*
+// Taking Decisions: if/else Statements
+const age = 15;
+// const isOldEnough = age >= 18;
+
+if (age >= 19) {
+    console.log('Sarah can start driving license.');
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`Sarah is too young. Wait another ${yearsLeft} years.`)
+}
+
+// example.
+const birthYear = 1991;
+let century
+if (birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+console.log(century);
+*/
+
+/*
+// coding challenge 2
+const weightMark = 78;
+const heightMark = 1.69;
+const weightJohn = 92;
+const heightJohn = 1.95;
+const weightMark2 = 95;
+const heightMark2 = 1.88;
+const weightJohn2 = 85;
+const heightJohn2 = 1.76;
+
+const bmiMark = weightMark / heightMark ** 2;
+const bmiJohn = weightJohn / heightJohn ** 2;
+const bmiMark2 = weightMark2 / heightMark2 ** 2;
+const bmiJohn2 = weightJohn2 / heightJohn2 ** 2;
+
+if (bmiMark > bmiJohn) {
+    console.log(`Mark's BMI is higher than John's!`);
+} else {
+    console.log(`John's BMI is higher than Mark's!`);
+}
+
+if (bmiMark2 > bmiJohn2) {
+    console.log(`Mark2's BMI (${bmiMark2}) is higher than John2's (${bmiJohn2})!`)
+} else {
+    console.log(`John2's BMI (${bmiJohn2}) is higher than Mark2's (${bmiMark2})!`)
+}
+*/
+
+// Type Converstion and Coercion
