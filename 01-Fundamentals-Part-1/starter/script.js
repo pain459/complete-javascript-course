@@ -213,6 +213,7 @@ n = n - 1;  //11 - 1
 console.log(n); // 10
 */
 
+/*
 // Truthy and Falsy
 // There are only 5 falsy values 0, '', undefined, null, Nan
 console.log(Boolean(0));
@@ -237,3 +238,140 @@ if (height) {
 } else {
     console.log(`Height is UNDEFINED!`);
 }
+*/
+
+/*
+// Equality operators == vs ===
+const age = '18';
+if (age === 18) console.log('You just became an adult. (strict)');
+
+if (age == 18) console.log('You just became an adult (loose)');
+
+// one more example.
+const favourite = Number(prompt("What's you favourite numbers? "));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) {
+    console.log("Cool. 23 is an anazing number!");
+} else if (favourite === 7) {
+    console.log('7 is also a cool number');
+} else if (favourite === 9) {
+    console.log('9 is also a cool number');
+} else {
+    console.log('Number is not 23 or 7');
+}
+
+if (favourite !== 23) {
+    console.log('Why not 23?');
+}
+*/
+/*
+// Logical Operators
+const hasDriversLicense = true;  //A
+const hasGoodVision = true;  //B
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+if (shouldDrive) {
+    console.log('Sarah is able to drive.');
+} else {
+    console.log('Someone should drive...');
+}
+
+const isTired = false;
+console.log(hasDriversLicense || hasGoodVision || isTired);
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log('Sarah is able to drive!');
+} else {
+    console.log('Someone else should drive...');
+}
+
+*/
+
+/*
+// coding challenge #3
+const avgScoreDolphins = (96 + 108 + 89) / 3;
+const avgScoreKoalas = (88 + 91 + 110) / 3;
+const minimumScore = 100;
+
+if (avgScoreDolphins > minimumScore && avgScoreKoalas > minimumScore && !(avgScoreDolphins === avgScoreKoalas)) {
+    console.log('Minimum score condition met. Proceeding further.');
+    console.log(`Scores as of now dolphins ${avgScoreDolphins}, koalas ${avgScoreKoalas}`);
+    if (avgScoreDolphins > avgScoreKoalas) {
+        console.log(`Dolphins won the trophy! Score ${avgScoreDolphins}`);
+    } else if (avgScoreDolphins < avgScoreKoalas) {
+        console.log(`Koalas won the trophy! Score ${avgScoreKoalas}`);
+    } else {
+        console.log('Its a draw match!');
+    }
+} else if ((avgScoreDolphins === avgScoreKoalas) && (avgScoreDolphins >= minimumScore && avgScoreKoalas >= minimumScore)) {
+    console.log('Minimum score condition met. Proceeding further.');
+    console.log(`Scores as of now dolphins ${avgScoreDolphins}, koalas ${avgScoreKoalas}`);
+    console.log(`It's a draw match witn minimum score acheived condition.!`);
+} else {
+    console.log(`Scores as of now dolphins ${avgScoreDolphins}, koalas ${avgScoreKoalas}`);
+    console.log('Minimum score condition not met!');
+}
+*/
+
+/*
+// The switch statement
+const day = 'wednesday';
+
+switch (day) {
+    case 'monday':
+        console.log('day 1');
+        break;
+    case 'tuesday':
+        console.log('day 2');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('day 3 or 4');
+        break;
+    case 'friday':
+        console.log('day 5');
+        break;
+    case 'saturday':
+        console.log('day 6');
+        break;
+    case 'sunday':
+        console.log('day 7');
+        break;
+}
+
+// writing the same in if-else
+
+const num = 3
+if (num === 1) {
+    console.log('found 1');
+} else if (num === 2 || num === 3) {
+    console.log('found 2 or 3');
+} else {
+    console.log('not found!');
+}
+*/
+
+/*
+// Conditional (ternary) operators
+const age = 23;
+age >= 18 ? console.log('I like to drink wine.') :
+    console.log('I like to drink water');
+
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink);
+
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`)
+*/
+
+// Coding Challenge #4
+
+const billValue = 430;
+
+const tip = billValue >= 50 && billValue <= 300 ? 0.15 * billValue : 0.2 * billValue;
+console.log(`The bill was ${billValue}, the tip was ${tip}, and the total value ${billValue + tip}`);
