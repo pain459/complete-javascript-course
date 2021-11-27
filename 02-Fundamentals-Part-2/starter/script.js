@@ -177,6 +177,7 @@ function describePopulation1(population, country) {
 console.log(describePopulation1(1441, 'China'));
 */
 
+/*
 // Reviewing functions
 
 const calcAge = function (birthYear) {
@@ -198,3 +199,33 @@ const yearsUntilRetirement2 = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement2(1991, 'RRR'));
 console.log(yearsUntilRetirement2(1950, 'Mike'));
+*/
+
+// coding Challenge # 1
+console.log('Welcome to Dolphins vs Koalas gymnastic match!');
+const calcAverage = (r1, r2, r3) => {
+    const averageScore = (r1 + r2 + r3) / 3;
+    return averageScore;
+}
+
+// const avgDolphins = calcAverage(44, 23, 71);
+const avgDolphins = calcAverage(85, 54, 41);
+
+// const avgKoalas = calcAverage(65, 54, 49);
+const avgKoalas = calcAverage(23, 34, 27);
+
+
+// console.log(avgDolphins, avgKoalas);
+
+function checkWinner(avgDolphins, avgKoalas) {
+    if (avgDolphins >= 2 * avgKoalas) {
+        return `Dolphins win (${avgDolphins} vs. ${avgKoalas})`;
+    } else if (avgKoalas >= 2 * avgDolphins) {
+        return `Koalas win ${avgKoalas} vs.${avgDolphins}`;
+    } else {
+        return `No team wins!`
+    }
+    // return `${avgDolphins} and ${avgKoalas}`;
+}
+
+console.log(checkWinner(avgDolphins, avgKoalas));
