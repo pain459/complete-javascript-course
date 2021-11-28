@@ -201,6 +201,7 @@ console.log(yearsUntilRetirement2(1991, 'RRR'));
 console.log(yearsUntilRetirement2(1950, 'Mike'));
 */
 
+/*
 // coding Challenge # 1
 console.log('Welcome to Dolphins vs Koalas gymnastic match!');
 const calcAverage = (r1, r2, r3) => {
@@ -229,3 +230,95 @@ function checkWinner(avgDolphins, avgKoalas) {
 }
 
 console.log(checkWinner(avgDolphins, avgKoalas));
+*/
+
+/*
+// Introduction to Arrays
+
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends);
+// one more way
+const years = new Array(1991, 1984, 2008, 2020);
+console.log(years);
+console.log(friends[0]);
+console.log(friends.length);
+console.log(friends[friends.length - 1]);  // to access last element.
+friends[2] = 'Jay';
+console.log(friends);
+
+const firstName = 'Jonas';
+// const jonas = ['Jonas', 'lastname', 2037 - 1991, 'M'];
+// const jonas = [firstName, 'lastname', 2037 - 1991, 'M'];
+const jonas = [firstName, 'lastname', 2037 - 1991, 'M', friends, 'teacher'];
+
+console.log(jonas);
+console.log(jonas[4][1]);
+console.log(jonas.length);
+
+// exercise
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+//const years = [1990, 1967, 2002, 2010, 2018];
+console.log(calcAge(years));
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1);
+console.log(age2);
+console.log(age3);
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])]
+console.log(ages);
+*/
+
+/*
+// Basic Array Operations (Methods)
+// const friends = ['Michael', 'Steven', 'Peter'];
+// friends.push('Jay');
+// console.log(friends);
+
+// storing the push function output and displaying the same.
+const friends = ['Michael', 'Steven', 'Peter'];
+const newLength = friends.push('Jay');
+console.log(friends);
+console.log(newLength);
+
+friends.unshift('John');
+console.log(friends);
+
+// remove elements
+friends.pop();
+const popped = friends.pop();
+console.log(friends);
+console.log(popped);
+
+friends.shift();
+console.log(friends);
+
+console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('Bob'));
+
+console.log(friends.includes('Steven'));
+*/
+
+// Coding challenge 2
+const calcTip = totalBill => {
+    if (totalBill >= 50 && totalBill <= 300) {
+        return .15 * totalBill;
+    } else {
+        return .2 * totalBill;
+    }
+}
+
+console.log(calcTip(100));
+
+const bills = new Array(125, 555, 44);
+console.log(bills);
+const tips = new Array(calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2]));
+console.log(tips);
+const total = new Array();
+total.push(bills[0] + tips[0]);
+total.push(bills[1] + tips[1]);
+total.push(bills[2] + tips[2]);
+console.log(total);
