@@ -414,3 +414,258 @@ console.log(myCountry.population);
 myCountry['population'] -= 2;
 console.log(myCountry.population);
 */
+
+/*
+// Object methods
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Jonas1',
+    birthYear: 1991,
+    job: 'Teacher',
+    friends: ['Mike', 'Peter', 'Steven'],
+    hasDriversLicense: false,
+    // calcAge: function (birthYear) {
+    //     return 2037 - birthYear;
+    // }
+    // calcAge: function () {
+    //     console.log(this);
+    //     return 2037 - this.birthYear;
+    // }
+    calcAge: function () {
+        // console.log(this);
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+    getSummary: function () {
+        return (`${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he ${this.hasDriversLicense ? 'has' : "don't has"} a driver's license.`);
+    }
+};
+
+console.log(jonas.calcAge());  // we should calculate the age atleast once.
+console.log(jonas.age);
+console.log(jonas.getSummary());
+
+*/
+/*
+// assignment
+const myCountry = {
+    country: 'India',
+    capital: 'New Delhi',
+    language: 'multiple',
+    population: 130,
+    neighbours: ['China', 'Pakistan', 'Nepal', 'Bhutan', 'SriLanka'],
+    describe: function () {
+        return (
+            `${this.country} has ${this.population} million ${this.language} languages-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`
+        );
+    }
+}
+
+console.log(myCountry.describe());
+*/
+/*
+// coding challenge 3
+
+const mark = {
+    firstName: 'Mark',
+    lastName: 'Miller',
+    weight: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.weight / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+const john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    weight: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = this.weight / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+// console.log(mark.calcBMI());
+// console.log(john.calcBMI());
+
+const mark_win = (`${mark.firstName + ' ' + mark.lastName}'s BMI (${mark.calcBMI()}) is greater than ${john.firstName + ' ' + john.lastName}'s (${john.calcBMI()})!`);
+const john_win = (`${john.firstName + ' ' + john.lastName}'s BMI (${john.calcBMI()}) is greater than ${mark.firstName + ' ' + mark.lastName}'s (${mark.calcBMI()})!`);
+
+
+// const result = mark.calcBMI() > john.calcBMI() ? 'result1' : 'result2'
+const result = mark.calcBMI() > john.calcBMI() ? console.log(mark_win) : console.log(john_win);
+
+// console.log(result);
+*/
+
+/*
+// Iteration: The for loop.
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Print this... ${rep}`);
+}
+
+// Assignment
+for (let rep = 1; rep <= 50; rep += 2) {
+    console.log(`Voter number ${rep} is currently voting`);
+}
+*/
+
+/*
+// Looping Arrays, Breaking and Continuing
+
+const jonasArray = [
+    'Jonas',
+    'Jonas1',
+    2037 - 1991,
+    'teacher',
+    ['Mike', 'Peter', 'Steven']
+];
+
+const types = [];
+for (let i = 0; i <= jonasArray.length - 1; i++) {
+    console.log(jonasArray[i], typeof jonasArray[i]);
+    // types[i] = typeof jonasArray[i]
+    types.push(typeof jonasArray[i]);  // One more way.
+}
+console.log(types);
+
+const exArray = [1, 2, 3, 4, 5];
+for (let i = 0; i <= exArray.length - 1; i++) {
+    console.log(i, exArray[i], typeof exArray[i]);
+}
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+for (let i = 0; i <= years.length - 1; i++) {
+    ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+// continue and break are 2 important statements.
+console.log('--- ONLY STRINGS ---');
+for (let i = 0; i <= jonasArray.length - 1; i++) {
+    if (typeof jonasArray[i] !== 'string') continue;
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+console.log('--- BREAK WITH NUMBER ---');
+for (let i = 0; i <= jonasArray.length - 1; i++) {
+    if (typeof jonasArray[i] === 'number') break;
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+*/
+
+/*
+// Assignment
+const worldPopulation = 7900; // actually million. But just saving some time.
+const populations = [1441, 1300, 1000]
+const percentages = [];
+const percentageOfWorld = function (population) {
+    return (population / worldPopulation) * 100;
+}
+for (let i = 0; i <= populations.length - 1; i++) {
+    percentages.push(percentageOfWorld(populations[i]));
+}
+console.log(percentages);
+*/
+
+/*
+// Looping Backwards and Loops in Loops
+
+const jonasArray = [
+    'Jonas',
+    'Jonas1',
+    2037 - 1991,
+    'teacher',
+    ['Mike', 'Peter', 'Steven']
+];
+
+for (let i = jonasArray.length - 1; i >= 0; i--) {
+    console.log(jonasArray[i], i);
+}
+
+// loop inside of a loop
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`---- Starting exercise ${exercise}`);
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`---- You can do it ${rep}`);
+    }
+}
+*/
+/*
+// Asssignment
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden',
+    'Russia']];
+for (let i = 0; i < listOfNeighbours.length; i++) {
+    for (let j = 0; j < listOfNeighbours[i].length; j++) {
+        console.log(`Neighbour:${listOfNeighbours[i][j]}`);
+    }
+}
+*/
+/*
+// while loop
+
+// sample for loop code.
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Print this... ${rep}`);
+}
+
+// While loop
+let rep = 1;
+while (rep <= 10) {
+    console.log(`print this...${rep}`);
+    rep++;
+}
+
+// rolling dice simulation.
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('Loop is about to end...');
+}
+
+*/
+
+
+// coding challenge 3
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+const calcTip = bill => {
+    if (bill >= 50 && bill <= 300) {
+        return .15 * bill;
+    } else {
+        return .2 * bill;
+    }
+}
+
+console.log(calcTip(100));
+
+for (let i = 0; i <= bills.length - 1; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(bills[i] + tips[i]);
+}
+console.log(tips);
+console.log(totals);
+// [ 26.4, 339.25, 202.4, 528, 44.4, 120.75, 12, 1320, 98.9, 59.8 ]
+
+
+
+const calcAverage = arr => {
+    let billTotal = 0;
+    for (let i = 0; i <= arr.length - 1; i++) {
+        billTotal += arr[i];
+    }
+    console.log(`Average is ${billTotal / arr.length}`);
+}
+
+calcAverage(totals);
+calcAverage(tips);
+calcAverage(bills);
